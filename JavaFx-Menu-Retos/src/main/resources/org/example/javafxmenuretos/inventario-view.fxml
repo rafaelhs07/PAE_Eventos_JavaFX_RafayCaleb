@@ -16,7 +16,14 @@
       xmlns="http://javafx.com/javafx/21.0.6"
       xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="org.example.javafxmenuretos.InventarioController">
-
+    <Button text="← Volver al menú"
+            onAction="#volverMenu"
+            prefWidth="150"
+            style="
+        -fx-background-color: #FFFFFF;
+        -fx-text-fill: #000000;
+        -fx-font-weight: bold;
+        "/>
     <padding>
         <Insets bottom="20"
                 left="40"
