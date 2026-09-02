@@ -17,7 +17,9 @@
       xmlns="http://javafx.com/javafx/21.0.6"
       xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="org.example.javafxmenuretos.CafeController">
-
+    <Button text="← Volver al menú"
+            onAction="#volverMenu"
+            prefWidth="150"/>
     <padding>
         <Insets top="20"
                 right="40"

@@ -48,6 +48,15 @@ public class CafeController {
 
     @FXML
     private TableColumn<LoteCafe, String> colCalidad;
+    @FXML
+    protected void volverMenu(ActionEvent event) {
+
+        Navegacion.cambiarVista(
+                (javafx.scene.Node) event.getSource(),
+                "menu-view.fxml",
+                "Menú de Retos JavaFX"
+        );
+    }
 
     @FXML
     public void initialize() {
