@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER"
+      spacing="18"
+      prefWidth="500"
+      prefHeight="500"
+      style="-fx-background-color: #3578AB;"
+      xmlns="http://javafx.com/javafx/21.0.6"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.javafxmenuretos.MenuController">
+
+    <padding>
+        <Insets top="25"
+                right="50"
+                bottom="25"
+                left="50"/>
+    </padding>
+
+    <ImageView fitWidth="120"
+               fitHeight="120"
+               preserveRatio="true">
+
+        <image>
+            <Image url="@uam_logo.png"/>
+        </image>
+
+    </ImageView>
+
+    <Label text="MENÚ DE RETOS JAVAFX"
+           style="
+           -fx-font-size: 24px;
+           -fx-font-weight: bold;
+           -fx-text-fill: white;
+           "/>
+
+    <Button text="Reto 1 - Inventario de Pulpería"
+            onAction="#abrirReto1"
+            prefWidth="280"
+            prefHeight="45"/>
+
+    <Button text="Reto 2 - Recepción de Café"
+            onAction="#abrirReto2"
+            prefWidth="280"
+            prefHeight="45"/>
+
+    <Button text="Reto 3 - Tienda de Artesanías"
+            onAction="#abrirReto3"
+            prefWidth="280"
+            prefHeight="45"/>
+
+</VBox>
