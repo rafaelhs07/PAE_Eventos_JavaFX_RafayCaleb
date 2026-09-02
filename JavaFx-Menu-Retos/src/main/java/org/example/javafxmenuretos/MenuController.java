@@ -25,13 +25,14 @@ public class MenuController {
 
     @FXML
     protected void abrirReto3() {
-        System.out.println("Reto 3 pendiente");
+        abrirVista(
+                "artesanias-view.fxml",
+                "Reto 3 - Tienda de Artesanías"
+        );
     }
 
     private void abrirVista(String archivo, String titulo) {
-
         try {
-
             FXMLLoader loader = new FXMLLoader(
                     getClass().getResource(archivo)
             );
@@ -39,12 +40,12 @@ public class MenuController {
             Scene scene = new Scene(loader.load());
 
             Stage ventana = new Stage();
-
             ventana.setTitle(titulo);
             ventana.setScene(scene);
             ventana.show();
 
         } catch (Exception e) {
+            System.out.println("No se pudo abrir: " + archivo);
             e.printStackTrace();
         }
     }

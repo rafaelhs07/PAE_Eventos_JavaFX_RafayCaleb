@@ -5,14 +5,19 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class MenuApplication extends Application {
+public class ArtesaniasApplication extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(MenuApplication.class.getResource("menu-view.fxml"));
+        FXMLLoader loader = new FXMLLoader(
+                ArtesaniasApplication.class.getResource(
+                        "artesanias-view.fxml"
+                )
+        );
+
         Scene scene = new Scene(loader.load());
 
-        stage.setTitle("Menú de Retos JavaFX");
+        stage.setTitle("Reto 3 - Tienda de Artesanías");
         stage.setScene(scene);
         stage.show();
     }
