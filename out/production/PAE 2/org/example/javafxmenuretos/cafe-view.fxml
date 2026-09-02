@@ -27,9 +27,9 @@
 
     <Label text="RECEPCIÓN DE CAFÉ"
            style="
-               -fx-font-size: 24px;
-               -fx-font-weight: bold;
-               -fx-text-fill: #159B9B;
+           -fx-font-size: 24px;
+           -fx-font-weight: bold;
+           -fx-text-fill: #159B9B;
            "/>
 
     <Label text="Código del lote"
@@ -69,19 +69,19 @@
               prefWidth="250"/>
 
     <Button text="Guardar lote"
-            onAction="#guardarLote"
+            onAction="#guarderLote"
             prefWidth="180"
             style="
-                -fx-background-color: #159B9B;
-                -fx-text-fill: white;
-                -fx-font-weight: bold;
+            -fx-background-color: #159B9B;
+            -fx-text-fill: white;
+            -fx-font-weight: bold;
             "/>
 
     <Label text="Lotes registrados"
            maxWidth="Infinity"
            style="
-               -fx-font-weight: bold;
-               -fx-text-fill: #159B9B;
+           -fx-font-weight: bold;
+           -fx-text-fill: #159B9B;
            "/>
 
     <TableView fx:id="tablaLotes"
@@ -89,6 +89,7 @@
                onMouseClicked="#mostrarDetalles">
 
         <columns>
+
             <TableColumn fx:id="colCodigo"
                          text="Código"
                          prefWidth="100"/>
@@ -108,6 +109,7 @@
             <TableColumn fx:id="colCalidad"
                          text="Calidad"
                          prefWidth="120"/>
+
         </columns>
 
     </TableView>

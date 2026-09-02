@@ -12,7 +12,7 @@
       prefWidth="500"
       prefHeight="500"
       style="-fx-background-color: #3578AB;"
-      xmlns="http://javafx.com/javafx/21"
+      xmlns="http://javafx.com/javafx/21.0.6"
       xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="org.example.javafxmenuretos.MenuController">
 
@@ -26,16 +26,18 @@
     <ImageView fitWidth="120"
                fitHeight="120"
                preserveRatio="true">
+
         <image>
             <Image url="@uam_logo.png"/>
         </image>
+
     </ImageView>
 
     <Label text="MENÚ DE RETOS JAVAFX"
            style="
-               -fx-font-size: 24px;
-               -fx-font-weight: bold;
-               -fx-text-fill: white;
+           -fx-font-size: 24px;
+           -fx-font-weight: bold;
+           -fx-text-fill: white;
            "/>
 
     <Button text="Reto 1 - Inventario de Pulpería"
