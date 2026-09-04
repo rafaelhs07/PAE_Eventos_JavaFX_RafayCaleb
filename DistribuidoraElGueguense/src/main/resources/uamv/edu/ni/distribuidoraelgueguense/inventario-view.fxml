@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefWidth="1000.0"
+            prefHeight="680.0"
+            style="-fx-background-color: #F5F1E8;"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="uamv.edu.ni.distribuidoraelgueguense.InventarioController">
+
+    <top>
+        <VBox>
+
+            <MenuBar style="-fx-background-color: #123B5D;">
+                <menus>
+
+                    <Menu text="Archivo">
+                        <items>
+                            <MenuItem text="Nuevo"
+                                      onAction="#nuevoProducto"/>
+
+                            <MenuItem text="Limpiar"
+                                      onAction="#limpiarFormulario"/>
+
+                            <MenuItem text="Salir"
+                                      onAction="#salir"/>
+                        </items>
+                    </Menu>
+
+                    <Menu text="Producto">
+                        <items>
+                            <MenuItem text="Guardar"
+                                      onAction="#guardarProducto"/>
+
+                            <MenuItem text="Editar"
+                                      onAction="#editarProducto"/>
+
+                            <MenuItem text="Eliminar"
+                                      onAction="#eliminarProducto"/>
+                        </items>
+                    </Menu>
+
+                    <Menu text="Ayuda">
+                        <items>
+                            <MenuItem text="Acerca de"
+                                      onAction="#mostrarAcercaDe"/>
+                        </items>
+                    </Menu>
+
+                </menus>
+            </MenuBar>
+
+            <ToolBar style="-fx-background-color: #D8A23A;">
+
+                <Button text="Nuevo"
+                        onAction="#nuevoProducto"
+                        style="
+                            -fx-background-color: #123B5D;
+                            -fx-text-fill: white;
+                            -fx-font-weight: bold;
+                        "/>
+
+                <Button text="Guardar"
+                        onAction="#guardarProducto"
+                        style="
+                            -fx-background-color: #2E7D32;
+                            -fx-text-fill: white;
+                            -fx-font-weight: bold;
+                        "/>
+
+                <Button text="Editar"
+                        onAction="#editarProducto"
+                        style="
+                            -fx-background-color: #D46A1F;
+                            -fx-text-fill: white;
+                            -fx-font-weight: bold;
+                        "/>
+
+                <Button text="Eliminar"
+                        onAction="#eliminarProducto"
+                        style="
+                            -fx-background-color: #A83232;
+                            -fx-text-fill: white;
+                            -fx-font-weight: bold;
+                        "/>
+
+            </ToolBar>
+
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="15">
+
+            <padding>
+                <Insets top="20"
+                        right="28"
+                        bottom="20"
+                        left="28"/>
+            </padding>
+
+            <HBox alignment="CENTER_LEFT"
+                  spacing="12"
+                  style="
+                      -fx-background-color: #123B5D;
+                      -fx-background-radius: 8;
+                      -fx-padding: 15;
+                  ">
+
+                <VBox spacing="4">
+
+                    <Label text="DISTRIBUIDORA EL GÜEGÜENSE"
+                           style="
+                               -fx-font-size: 24px;
+                               -fx-font-weight: bold;
+                               -fx-text-fill: white;
+                           "/>
+
+                    <Label text="Sistema de control de inventario"
+                           style="
+                               -fx-font-size: 14px;
+                               -fx-text-fill: #F5D47A;
+                           "/>
+
+                </VBox>
+
+            </HBox>
+
+            <GridPane hgap="12"
+                      vgap="12"
+                      style="
+                          -fx-background-color: white;
+                          -fx-border-color: #D8A23A;
+                          -fx-border-width: 1.5;
+                          -fx-background-radius: 8;
+                          -fx-border-radius: 8;
+                          -fx-padding: 18;
+                      ">
+
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="16"/>
+                    <ColumnConstraints percentWidth="34"/>
+                    <ColumnConstraints percentWidth="16"/>
+                    <ColumnConstraints percentWidth="34"/>
+                </columnConstraints>
+
+                <Label text="Código:"
+                       GridPane.columnIndex="0"
+                       GridPane.rowIndex="0"
+                       style="-fx-font-weight: bold;"/>
+
+                <TextField fx:id="txtCodigo"
+                           promptText="Ejemplo: P001"
+                           GridPane.columnIndex="1"
+                           GridPane.rowIndex="0"/>
+
+                <Label text="Nombre:"
+                       GridPane.columnIndex="2"
+                       GridPane.rowIndex="0"
+                       style="-fx-font-weight: bold;"/>
+
+                <TextField fx:id="txtNombre"
+                           promptText="Nombre del producto"
+                           GridPane.columnIndex="3"
+                           GridPane.rowIndex="0"/>
+
+                <Label text="Categoría:"
+                       GridPane.columnIndex="0"
+                       GridPane.rowIndex="1"
+                       style="-fx-font-weight: bold;"/>
+
+                <TextField fx:id="txtCategoria"
+                           promptText="Ejemplo: Abarrotes"
+                           GridPane.columnIndex="1"
+                           GridPane.rowIndex="1"/>
+
+                <Label text="Precio (C$):"
+                       GridPane.columnIndex="2"
+                       GridPane.rowIndex="1"
+                       style="-fx-font-weight: bold;"/>
+
+                <TextField fx:id="txtPrecio"
+                           promptText="Ejemplo: 75.50"
+                           GridPane.columnIndex="3"
+                           GridPane.rowIndex="1"/>
+
+                <Label text="Existencia:"
+                       GridPane.columnIndex="0"
+                       GridPane.rowIndex="2"
+                       style="-fx-font-weight: bold;"/>
+
+                <TextField fx:id="txtExistencia"
+                           promptText="Ejemplo: 25"
+                           GridPane.columnIndex="1"
+                           GridPane.rowIndex="2"/>
+
+            </GridPane>
+
+            <Label text="Productos registrados"
+                   style="
+                       -fx-font-size: 17px;
+                       -fx-font-weight: bold;
+                       -fx-text-fill: #123B5D;
+                   "/>
+
+            <TableView fx:id="tablaProductos"
+                       prefHeight="280.0"
+                       VBox.vgrow="ALWAYS"
+                       style="
+                           -fx-border-color: #123B5D;
+                           -fx-border-width: 1;
+                       ">
+
+                <columns>
+
+                    <TableColumn fx:id="colCodigo"
+                                 text="Código"
+                                 prefWidth="140"/>
+
+                    <TableColumn fx:id="colNombre"
+                                 text="Nombre"
+                                 prefWidth="260"/>
+
+                    <TableColumn fx:id="colCategoria"
+                                 text="Categoría"
+                                 prefWidth="190"/>
+
+                    <TableColumn fx:id="colPrecio"
+                                 text="Precio (C$)"
+                                 prefWidth="160"/>
+
+                    <TableColumn fx:id="colExistencia"
+                                 text="Existencia"
+                                 prefWidth="150"/>
+
+                </columns>
+
+            </TableView>
+
+            <Label fx:id="lblResultado"
+                   text="Sistema listo."
+                   wrapText="true"
+                   style="
+                       -fx-background-color: #FFF3CD;
+                       -fx-border-color: #D8A23A;
+                       -fx-border-radius: 5;
+                       -fx-background-radius: 5;
+                       -fx-padding: 10;
+                       -fx-text-fill: #5B4218;
+                       -fx-font-weight: bold;
+                   "/>
+
+        </VBox>
+    </center>
+
+</BorderPane>
